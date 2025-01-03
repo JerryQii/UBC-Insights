@@ -1,0 +1,65 @@
+{
+	"title": "Minimum Room Capacity for Each Room Type",
+	"input": {
+		"WHERE": {},
+		"OPTIONS": {
+			"COLUMNS": [
+				"rooms_type",
+				"minSeats"
+			],
+			"ORDER": {
+				"dir": "UP",
+				"keys": [
+					"minSeats"
+				]
+			}
+		},
+		"TRANSFORMATIONS": {
+			"GROUP": [
+				"rooms_type"
+			],
+			"APPLY": [
+				{
+					"minSeats": {
+						"MIN": "rooms_seats"
+					}
+				}
+			]
+		}
+	},
+	"errorExpected": false,
+	"expected": [
+		{
+			"rooms_type": "Small Group",
+			"minSeats": 6
+		},
+		{
+			"rooms_type": "Open Design General Purpose",
+			"minSeats": 16
+		},
+		{
+			"rooms_type": "Active Learning",
+			"minSeats": 16
+		},
+		{
+			"rooms_type": "Studio Lab",
+			"minSeats": 30
+		},
+		{
+			"rooms_type": "TBD",
+			"minSeats": 32
+		},
+		{
+			"rooms_type": "Case Style",
+			"minSeats": 34
+		},
+		{
+			"rooms_type": "Tiered Large Group",
+			"minSeats": 44
+		},
+		{
+			"rooms_type": "",
+			"minSeats": 60
+		}
+	]
+}

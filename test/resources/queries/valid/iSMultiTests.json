@@ -1,0 +1,513 @@
+{
+	"title": "IS multi tests",
+	"input": {
+		"WHERE": {
+			"OR": [
+				{
+					"AND": [
+						{
+							"GT": {
+								"sections_avg": 0
+							}
+						},
+						{
+							"IS": {
+								"sections_dept": "*s*"
+							}
+						},
+						{
+							"IS": {
+								"sections_dept": "*c"
+							}
+						},
+						{
+							"IS": {
+								"sections_dept": "b*"
+							}
+						},
+						{
+							"IS": {
+								"sections_dept": "*a*"
+							}
+						}
+					]
+				},
+				{
+					"EQ": {
+						"sections_avg": 0
+					}
+				}
+			]
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"sections_dept",
+				"sections_avg",
+				"sections_id"
+			]
+		}
+	},
+	"errorExpected": false,
+	"expected": [
+		{
+			"sections_dept": "basc",
+			"sections_avg": 80.4,
+			"sections_id": "500"
+		},
+		{
+			"sections_dept": "basc",
+			"sections_avg": 81.5,
+			"sections_id": "500"
+		},
+		{
+			"sections_dept": "basc",
+			"sections_avg": 80.6,
+			"sections_id": "500"
+		},
+		{
+			"sections_dept": "basc",
+			"sections_avg": 80,
+			"sections_id": "500"
+		},
+		{
+			"sections_dept": "basc",
+			"sections_avg": 81.12,
+			"sections_id": "500"
+		},
+		{
+			"sections_dept": "basc",
+			"sections_avg": 80.38,
+			"sections_id": "500"
+		},
+		{
+			"sections_dept": "basc",
+			"sections_avg": 80.47,
+			"sections_id": "500"
+		},
+		{
+			"sections_dept": "basc",
+			"sections_avg": 80.47,
+			"sections_id": "500"
+		},
+		{
+			"sections_dept": "basc",
+			"sections_avg": 84.25,
+			"sections_id": "500"
+		},
+		{
+			"sections_dept": "basc",
+			"sections_avg": 85.53,
+			"sections_id": "500"
+		},
+		{
+			"sections_dept": "basc",
+			"sections_avg": 83.79,
+			"sections_id": "500"
+		},
+		{
+			"sections_dept": "basc",
+			"sections_avg": 80.63,
+			"sections_id": "500"
+		},
+		{
+			"sections_dept": "basc",
+			"sections_avg": 83.4,
+			"sections_id": "500"
+		},
+		{
+			"sections_dept": "basc",
+			"sections_avg": 81.71,
+			"sections_id": "500"
+		},
+		{
+			"sections_dept": "basc",
+			"sections_avg": 80.79,
+			"sections_id": "500"
+		},
+		{
+			"sections_dept": "basc",
+			"sections_avg": 81.33,
+			"sections_id": "500"
+		},
+		{
+			"sections_dept": "basc",
+			"sections_avg": 81.17,
+			"sections_id": "500"
+		},
+		{
+			"sections_dept": "basc",
+			"sections_avg": 81.17,
+			"sections_id": "500"
+		},
+		{
+			"sections_dept": "basc",
+			"sections_avg": 80.27,
+			"sections_id": "500"
+		},
+		{
+			"sections_dept": "basc",
+			"sections_avg": 81.71,
+			"sections_id": "500"
+		},
+		{
+			"sections_dept": "basc",
+			"sections_avg": 77.24,
+			"sections_id": "500"
+		},
+		{
+			"sections_dept": "basc",
+			"sections_avg": 79.86,
+			"sections_id": "500"
+		},
+		{
+			"sections_dept": "basc",
+			"sections_avg": 80.45,
+			"sections_id": "500"
+		},
+		{
+			"sections_dept": "basc",
+			"sections_avg": 80.33,
+			"sections_id": "500"
+		},
+		{
+			"sections_dept": "basc",
+			"sections_avg": 80.48,
+			"sections_id": "500"
+		},
+		{
+			"sections_dept": "basc",
+			"sections_avg": 80.47,
+			"sections_id": "500"
+		},
+		{
+			"sections_dept": "basc",
+			"sections_avg": 84.41,
+			"sections_id": "500"
+		},
+		{
+			"sections_dept": "basc",
+			"sections_avg": 81.47,
+			"sections_id": "500"
+		},
+		{
+			"sections_dept": "basc",
+			"sections_avg": 81.64,
+			"sections_id": "500"
+		},
+		{
+			"sections_dept": "basc",
+			"sections_avg": 79.15,
+			"sections_id": "500"
+		},
+		{
+			"sections_dept": "basc",
+			"sections_avg": 83.03,
+			"sections_id": "500"
+		},
+		{
+			"sections_dept": "basc",
+			"sections_avg": 81.67,
+			"sections_id": "500"
+		},
+		{
+			"sections_dept": "basc",
+			"sections_avg": 84.09,
+			"sections_id": "500"
+		},
+		{
+			"sections_dept": "basc",
+			"sections_avg": 84.09,
+			"sections_id": "500"
+		},
+		{
+			"sections_dept": "basc",
+			"sections_avg": 80.97,
+			"sections_id": "500"
+		},
+		{
+			"sections_dept": "basc",
+			"sections_avg": 81.88,
+			"sections_id": "500"
+		},
+		{
+			"sections_dept": "basc",
+			"sections_avg": 81.52,
+			"sections_id": "500"
+		},
+		{
+			"sections_dept": "basc",
+			"sections_avg": 81.41,
+			"sections_id": "500"
+		},
+		{
+			"sections_dept": "basc",
+			"sections_avg": 80.04,
+			"sections_id": "523"
+		},
+		{
+			"sections_dept": "basc",
+			"sections_avg": 84.18,
+			"sections_id": "523"
+		},
+		{
+			"sections_dept": "basc",
+			"sections_avg": 82.35,
+			"sections_id": "523"
+		},
+		{
+			"sections_dept": "basc",
+			"sections_avg": 81.14,
+			"sections_id": "523"
+		},
+		{
+			"sections_dept": "basc",
+			"sections_avg": 81.14,
+			"sections_id": "523"
+		},
+		{
+			"sections_dept": "basc",
+			"sections_avg": 81.6,
+			"sections_id": "523"
+		},
+		{
+			"sections_dept": "basc",
+			"sections_avg": 81.6,
+			"sections_id": "523"
+		},
+		{
+			"sections_dept": "basc",
+			"sections_avg": 80.1,
+			"sections_id": "523"
+		},
+		{
+			"sections_dept": "basc",
+			"sections_avg": 79.63,
+			"sections_id": "523"
+		},
+		{
+			"sections_dept": "basc",
+			"sections_avg": 79.85,
+			"sections_id": "523"
+		},
+		{
+			"sections_dept": "basc",
+			"sections_avg": 80.89,
+			"sections_id": "523"
+		},
+		{
+			"sections_dept": "basc",
+			"sections_avg": 81.17,
+			"sections_id": "523"
+		},
+		{
+			"sections_dept": "basc",
+			"sections_avg": 76.03,
+			"sections_id": "523"
+		},
+		{
+			"sections_dept": "basc",
+			"sections_avg": 74.42,
+			"sections_id": "523"
+		},
+		{
+			"sections_dept": "basc",
+			"sections_avg": 77.82,
+			"sections_id": "523"
+		},
+		{
+			"sections_dept": "basc",
+			"sections_avg": 80.35,
+			"sections_id": "523"
+		},
+		{
+			"sections_dept": "basc",
+			"sections_avg": 80.35,
+			"sections_id": "523"
+		},
+		{
+			"sections_dept": "basc",
+			"sections_avg": 81.09,
+			"sections_id": "523"
+		},
+		{
+			"sections_dept": "basc",
+			"sections_avg": 82.06,
+			"sections_id": "523"
+		},
+		{
+			"sections_dept": "basc",
+			"sections_avg": 80.5,
+			"sections_id": "523"
+		},
+		{
+			"sections_dept": "basc",
+			"sections_avg": 75.07,
+			"sections_id": "523"
+		},
+		{
+			"sections_dept": "basc",
+			"sections_avg": 77.89,
+			"sections_id": "523"
+		},
+		{
+			"sections_dept": "basc",
+			"sections_avg": 78.84,
+			"sections_id": "523"
+		},
+		{
+			"sections_dept": "basc",
+			"sections_avg": 82.16,
+			"sections_id": "524"
+		},
+		{
+			"sections_dept": "basc",
+			"sections_avg": 82.16,
+			"sections_id": "524"
+		},
+		{
+			"sections_dept": "basc",
+			"sections_avg": 85.12,
+			"sections_id": "524"
+		},
+		{
+			"sections_dept": "basc",
+			"sections_avg": 85.12,
+			"sections_id": "524"
+		},
+		{
+			"sections_dept": "basc",
+			"sections_avg": 82.05,
+			"sections_id": "524"
+		},
+		{
+			"sections_dept": "basc",
+			"sections_avg": 82.05,
+			"sections_id": "524"
+		},
+		{
+			"sections_dept": "basc",
+			"sections_avg": 82.68,
+			"sections_id": "524"
+		},
+		{
+			"sections_dept": "basc",
+			"sections_avg": 82.68,
+			"sections_id": "524"
+		},
+		{
+			"sections_dept": "basc",
+			"sections_avg": 86.04,
+			"sections_id": "524"
+		},
+		{
+			"sections_dept": "basc",
+			"sections_avg": 86.04,
+			"sections_id": "524"
+		},
+		{
+			"sections_dept": "basc",
+			"sections_avg": 80.82,
+			"sections_id": "550"
+		},
+		{
+			"sections_dept": "basc",
+			"sections_avg": 80.82,
+			"sections_id": "550"
+		},
+		{
+			"sections_dept": "basc",
+			"sections_avg": 83.57,
+			"sections_id": "550"
+		},
+		{
+			"sections_dept": "basc",
+			"sections_avg": 82.22,
+			"sections_id": "550"
+		},
+		{
+			"sections_dept": "basc",
+			"sections_avg": 78.94,
+			"sections_id": "550"
+		},
+		{
+			"sections_dept": "basc",
+			"sections_avg": 81.88,
+			"sections_id": "550"
+		},
+		{
+			"sections_dept": "basc",
+			"sections_avg": 78.84,
+			"sections_id": "550"
+		},
+		{
+			"sections_dept": "basc",
+			"sections_avg": 79.6,
+			"sections_id": "550"
+		},
+		{
+			"sections_dept": "basc",
+			"sections_avg": 78.02,
+			"sections_id": "550"
+		},
+		{
+			"sections_dept": "basc",
+			"sections_avg": 78.89,
+			"sections_id": "550"
+		},
+		{
+			"sections_dept": "basc",
+			"sections_avg": 79.8,
+			"sections_id": "550"
+		},
+		{
+			"sections_dept": "basc",
+			"sections_avg": 78.84,
+			"sections_id": "550"
+		},
+		{
+			"sections_dept": "basc",
+			"sections_avg": 81.5,
+			"sections_id": "550"
+		},
+		{
+			"sections_dept": "basc",
+			"sections_avg": 80.01,
+			"sections_id": "550"
+		},
+		{
+			"sections_dept": "basc",
+			"sections_avg": 84.1,
+			"sections_id": "550"
+		},
+		{
+			"sections_dept": "basc",
+			"sections_avg": 84.67,
+			"sections_id": "550"
+		},
+		{
+			"sections_dept": "basc",
+			"sections_avg": 84.9,
+			"sections_id": "550"
+		},
+		{
+			"sections_dept": "basc",
+			"sections_avg": 84.55,
+			"sections_id": "550"
+		},
+		{
+			"sections_dept": "frst",
+			"sections_avg": 0,
+			"sections_id": "202"
+		},
+		{
+			"sections_dept": "lfs",
+			"sections_avg": 0,
+			"sections_id": "100"
+		},
+		{
+			"sections_dept": "lfs",
+			"sections_avg": 0,
+			"sections_id": "100"
+		}
+	]
+}

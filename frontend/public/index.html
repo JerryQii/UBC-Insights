@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>InsightUBC</title>
+    <link href="style.css" rel="stylesheet"/>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>InsightUBC</h1>
+    </header>
+
+    <main>
+        <section class="dataset-list">
+            <h2>Dataset List</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Select</th>
+                        <th>ID</th>
+                        <th>Kind</th>
+                        <th>Rows</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Dataset rows will be dynamically inserted here -->
+                </tbody>
+            </table>
+        </section>
+
+        <section class="dataset-add">
+            <h2>Add Dataset</h2>
+            <form id="datasetForm">
+                <label for="datasetId">ID</label>
+                <input type="text" id="datasetId" placeholder="ID must be unique & no underscores">
+
+                <label for="datasetKind">Kind</label>
+                <select id="datasetKind">
+                    <option>Sections</option>
+                    <option>Rooms</option>
+                </select>
+
+                <label for="fileUpload">File</label>
+                <input type="file" id="fileUpload" accept=".zip">
+                <button type="submit" id="fileSubmit">Submit</button>
+            </form>
+        </section>
+
+        
+            <section class="query-section">
+                <h2>Generate Insights</h2>
+
+                <div class="query-form">
+                    <label for="departmentInput">Department Code:</label>
+                    <input type="text" id="departmentInput" placeholder="e.g., cpsc">
+
+                    <label for="courseNumberInput">Course Number:</label>
+                    <input type="text" id="courseNumberInput" placeholder="e.g., 310">
+
+                    <label for="querySelect">Select Insight:</label>
+                    <select id="querySelect">
+                        <option value="gradeOverTime">Grade Average Over Time</option>
+                        <option value="passFailOverTime">Pass and Fail Counts Over Time</option>
+                        <option value="auditOverTime">Number of Audited Students Over Time</option>
+                        <option value="courseAverages">Course Averages in Department</option>
+                        <option value="instructorAverages">Instructors' Course Averages</option>
+                    </select>
+
+                    <button id="runQueryButton" type="button">Generate</button>
+                </div>
+
+                <!-- Canvas element for the chart -->
+                <canvas id="chart" width="400" height="200"></canvas>
+            </section>
+
+            <section class="list-of-courses">
+                <h2>Course Reminder</h2>
+
+                <div class="list">
+                    <input type="text" id="stringInput" placeholder="Enter the course id">
+                    <button id="addButton" type="button">Add to List</button>
+                    <ul id="stringList"></ul>
+                </div>
+            </section>
+        
+    </main>
+</div>
+
+<!-- Notification Container -->
+<div id="notification-container"></div>
+
+<!-- Include Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<!-- Frontend JavaScript -->
+<script type="module" src="utils.js"></script>
+<script type="module" src="datasetManager.js"></script>
+<script type="module" src="chartManager.js"></script>
+<script type="module" src="listManager.js"></script>
+<script type="module" src="queryManager.js"></script>
+<script type="module" src="frontend.js"></script>
+</body>
+</html>

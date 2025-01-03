@@ -1,0 +1,35 @@
+{
+	"title": "sections left should pass",
+	"input": {
+		"WHERE":{
+		   "OR":[	
+			  {
+				 "AND":[
+					{
+					   "GT":{
+						  "sections_avg":0
+					   }
+					},
+					{
+					   "IS":{
+						  "sections_dept":"est*"
+					   }
+					}
+				 ]
+			  },
+			  {
+				 "EQ":{
+					"sections_avg":0
+				 }
+			  }
+		   ]
+		},
+		"OPTIONS":{
+		   "COLUMNS":[
+			  "sections_id"
+		   ]
+		}
+	},
+	"errorExpected": false,
+	"expected": [{"sections_id":"202"},{"sections_id":"100"},{"sections_id":"100"}]
+}

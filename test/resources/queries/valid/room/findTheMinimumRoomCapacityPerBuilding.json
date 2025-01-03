@@ -1,0 +1,209 @@
+{
+	"title": "Find the Minimum Room Capacity per Building",
+	"input": {
+		"WHERE": {},
+		"OPTIONS": {
+			"COLUMNS": [
+				"rooms_shortname",
+				"minSeats"
+			],
+			"ORDER": {
+				"dir": "UP",
+				"keys": [
+					"minSeats"
+				]
+			}
+		},
+		"TRANSFORMATIONS": {
+			"GROUP": [
+				"rooms_shortname"
+			],
+			"APPLY": [
+				{
+					"minSeats": {
+						"MIN": "rooms_seats"
+					}
+				}
+			]
+		}
+	},
+	"errorExpected": false,
+	"expected": [
+		{
+			"rooms_shortname": "MCML",
+			"minSeats": 6
+		},
+		{
+			"rooms_shortname": "PHRM",
+			"minSeats": 7
+		},
+		{
+			"rooms_shortname": "IBLC",
+			"minSeats": 8
+		},
+		{
+			"rooms_shortname": "WOOD",
+			"minSeats": 10
+		},
+		{
+			"rooms_shortname": "FNH",
+			"minSeats": 12
+		},
+		{
+			"rooms_shortname": "SOWK",
+			"minSeats": 12
+		},
+		{
+			"rooms_shortname": "SPPH",
+			"minSeats": 12
+		},
+		{
+			"rooms_shortname": "BIOL",
+			"minSeats": 16
+		},
+		{
+			"rooms_shortname": "ANGU",
+			"minSeats": 16
+		},
+		{
+			"rooms_shortname": "ORCH",
+			"minSeats": 16
+		},
+		{
+			"rooms_shortname": "BUCH",
+			"minSeats": 18
+		},
+		{
+			"rooms_shortname": "FSC",
+			"minSeats": 18
+		},
+		{
+			"rooms_shortname": "ALRD",
+			"minSeats": 20
+		},
+		{
+			"rooms_shortname": "AUDX",
+			"minSeats": 20
+		},
+		{
+			"rooms_shortname": "LASR",
+			"minSeats": 20
+		},
+		{
+			"rooms_shortname": "SCRF",
+			"minSeats": 20
+		},
+		{
+			"rooms_shortname": "GEOG",
+			"minSeats": 21
+		},
+		{
+			"rooms_shortname": "CEME",
+			"minSeats": 22
+		},
+		{
+			"rooms_shortname": "BRKX",
+			"minSeats": 24
+		},
+		{
+			"rooms_shortname": "PCOH",
+			"minSeats": 24
+		},
+		{
+			"rooms_shortname": "MATH",
+			"minSeats": 25
+		},
+		{
+			"rooms_shortname": "MGYM",
+			"minSeats": 25
+		},
+		{
+			"rooms_shortname": "ANSO",
+			"minSeats": 26
+		},
+		{
+			"rooms_shortname": "SWNG",
+			"minSeats": 27
+		},
+		{
+			"rooms_shortname": "HENN",
+			"minSeats": 30
+		},
+		{
+			"rooms_shortname": "UCLL",
+			"minSeats": 30
+		},
+		{
+			"rooms_shortname": "FORW",
+			"minSeats": 35
+		},
+		{
+			"rooms_shortname": "OSBO",
+			"minSeats": 39
+		},
+		{
+			"rooms_shortname": "DMP",
+			"minSeats": 40
+		},
+		{
+			"rooms_shortname": "MCLD",
+			"minSeats": 40
+		},
+		{
+			"rooms_shortname": "LSK",
+			"minSeats": 42
+		},
+		{
+			"rooms_shortname": "EOSM",
+			"minSeats": 50
+		},
+		{
+			"rooms_shortname": "IONA",
+			"minSeats": 50
+		},
+		{
+			"rooms_shortname": "HEBB",
+			"minSeats": 54
+		},
+		{
+			"rooms_shortname": "CHBE",
+			"minSeats": 60
+		},
+		{
+			"rooms_shortname": "ESB",
+			"minSeats": 80
+		},
+		{
+			"rooms_shortname": "CHEM",
+			"minSeats": 90
+		},
+		{
+			"rooms_shortname": "WESB",
+			"minSeats": 102
+		},
+		{
+			"rooms_shortname": "MATX",
+			"minSeats": 106
+		},
+		{
+			"rooms_shortname": "LSC",
+			"minSeats": 125
+		},
+		{
+			"rooms_shortname": "AERL",
+			"minSeats": 144
+		},
+		{
+			"rooms_shortname": "FRDM",
+			"minSeats": 160
+		},
+		{
+			"rooms_shortname": "SRC",
+			"minSeats": 299
+		},
+		{
+			"rooms_shortname": "CIRS",
+			"minSeats": 426
+		}
+	]
+}

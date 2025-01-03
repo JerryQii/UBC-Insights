@@ -1,0 +1,204 @@
+{
+	"title": "Count Unique Furniture Types per Building",
+	"input": {
+		"WHERE": {},
+		"OPTIONS": {
+			"COLUMNS": [
+				"rooms_shortname",
+				"numFurnitureTypes"
+			],
+			"ORDER": "rooms_shortname"
+		},
+		"TRANSFORMATIONS": {
+			"GROUP": [
+				"rooms_shortname"
+			],
+			"APPLY": [
+				{
+					"numFurnitureTypes": {
+						"COUNT": "rooms_furniture"
+					}
+				}
+			]
+		}
+	},
+	"errorExpected": false,
+	"expected": [
+		{
+			"rooms_shortname": "AERL",
+			"numFurnitureTypes": 1
+		},
+		{
+			"rooms_shortname": "ALRD",
+			"numFurnitureTypes": 2
+		},
+		{
+			"rooms_shortname": "ANGU",
+			"numFurnitureTypes": 2
+		},
+		{
+			"rooms_shortname": "ANSO",
+			"numFurnitureTypes": 3
+		},
+		{
+			"rooms_shortname": "AUDX",
+			"numFurnitureTypes": 1
+		},
+		{
+			"rooms_shortname": "BIOL",
+			"numFurnitureTypes": 3
+		},
+		{
+			"rooms_shortname": "BRKX",
+			"numFurnitureTypes": 2
+		},
+		{
+			"rooms_shortname": "BUCH",
+			"numFurnitureTypes": 7
+		},
+		{
+			"rooms_shortname": "CEME",
+			"numFurnitureTypes": 3
+		},
+		{
+			"rooms_shortname": "CHBE",
+			"numFurnitureTypes": 2
+		},
+		{
+			"rooms_shortname": "CHEM",
+			"numFurnitureTypes": 1
+		},
+		{
+			"rooms_shortname": "CIRS",
+			"numFurnitureTypes": 1
+		},
+		{
+			"rooms_shortname": "DMP",
+			"numFurnitureTypes": 2
+		},
+		{
+			"rooms_shortname": "EOSM",
+			"numFurnitureTypes": 1
+		},
+		{
+			"rooms_shortname": "ESB",
+			"numFurnitureTypes": 3
+		},
+		{
+			"rooms_shortname": "FNH",
+			"numFurnitureTypes": 3
+		},
+		{
+			"rooms_shortname": "FORW",
+			"numFurnitureTypes": 2
+		},
+		{
+			"rooms_shortname": "FRDM",
+			"numFurnitureTypes": 1
+		},
+		{
+			"rooms_shortname": "FSC",
+			"numFurnitureTypes": 3
+		},
+		{
+			"rooms_shortname": "GEOG",
+			"numFurnitureTypes": 4
+		},
+		{
+			"rooms_shortname": "HEBB",
+			"numFurnitureTypes": 2
+		},
+		{
+			"rooms_shortname": "HENN",
+			"numFurnitureTypes": 2
+		},
+		{
+			"rooms_shortname": "IBLC",
+			"numFurnitureTypes": 5
+		},
+		{
+			"rooms_shortname": "IONA",
+			"numFurnitureTypes": 2
+		},
+		{
+			"rooms_shortname": "LASR",
+			"numFurnitureTypes": 4
+		},
+		{
+			"rooms_shortname": "LSC",
+			"numFurnitureTypes": 1
+		},
+		{
+			"rooms_shortname": "LSK",
+			"numFurnitureTypes": 2
+		},
+		{
+			"rooms_shortname": "MATH",
+			"numFurnitureTypes": 3
+		},
+		{
+			"rooms_shortname": "MATX",
+			"numFurnitureTypes": 1
+		},
+		{
+			"rooms_shortname": "MCLD",
+			"numFurnitureTypes": 2
+		},
+		{
+			"rooms_shortname": "MCML",
+			"numFurnitureTypes": 4
+		},
+		{
+			"rooms_shortname": "MGYM",
+			"numFurnitureTypes": 1
+		},
+		{
+			"rooms_shortname": "ORCH",
+			"numFurnitureTypes": 5
+		},
+		{
+			"rooms_shortname": "OSBO",
+			"numFurnitureTypes": 2
+		},
+		{
+			"rooms_shortname": "PCOH",
+			"numFurnitureTypes": 3
+		},
+		{
+			"rooms_shortname": "PHRM",
+			"numFurnitureTypes": 2
+		},
+		{
+			"rooms_shortname": "SCRF",
+			"numFurnitureTypes": 3
+		},
+		{
+			"rooms_shortname": "SOWK",
+			"numFurnitureTypes": 2
+		},
+		{
+			"rooms_shortname": "SPPH",
+			"numFurnitureTypes": 2
+		},
+		{
+			"rooms_shortname": "SRC",
+			"numFurnitureTypes": 1
+		},
+		{
+			"rooms_shortname": "SWNG",
+			"numFurnitureTypes": 3
+		},
+		{
+			"rooms_shortname": "UCLL",
+			"numFurnitureTypes": 3
+		},
+		{
+			"rooms_shortname": "WESB",
+			"numFurnitureTypes": 1
+		},
+		{
+			"rooms_shortname": "WOOD",
+			"numFurnitureTypes": 4
+		}
+	]
+}

@@ -1,0 +1,71 @@
+{
+	"title": "roomcolumntrans",
+	"input": {
+		"WHERE": {
+			"AND": [
+				{
+					"IS": {
+						"rooms_furniture": "*Tables*"
+					}
+				},
+				{
+					"GT": {
+						"rooms_seats": 150
+					}
+				}
+			]
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"rooms_shortname",
+				"rooms_lon",
+				"maxSeats",
+				"minLon",
+				"avgLat",
+				"countSeats",
+				"sumLon"
+			],
+			"ORDER": {
+				"dir": "DOWN",
+				"keys": [
+					"maxSeats",
+					"avgLat"
+				]
+			}
+		},
+		"TRANSFORMATIONS": {
+			"GROUP": [
+				"rooms_shortname"
+			],
+			"APPLY": [
+				{
+					"maxSeats": {
+						"MAX": "rooms_seats"
+					}
+				},
+				{
+					"minLon": {
+						"MIN": "rooms_lon"
+					}
+				},
+				{
+					"avgLat": {
+						"AVG": "rooms_lat"
+					}
+				},
+				{
+					"countSeats": {
+						"COUNT": "rooms_seats"
+					}
+				},
+				{
+					"sumLon": {
+						"SUM": "rooms_lon"
+					}
+				}
+			]
+		}
+	},
+	"errorExpected": true,
+	"expected": "InsightError"
+}

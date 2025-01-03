@@ -1,0 +1,35 @@
+{
+	"title": "missing dir key",
+	"input": {
+		"WHERE": {
+			"LT": {
+				"maxLatitude": 49.26
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"rooms_shortname",
+				"maxLatitude"
+			],
+			"ORDER": {
+				"keys": [
+					"maxLatitude"
+				]
+			}
+		},
+		"TRANSFORMATIONS": {
+			"GROUP": [
+				"rooms_shortname"
+			],
+			"APPLY": [
+				{
+					"maxLatitude": {
+						"MAX": "rooms_lat"
+					}
+				}
+			]
+		}
+	},
+	"errorExpected": true,
+	"expected": "InsightError"
+}

@@ -1,0 +1,59 @@
+{
+	"title": "",
+	"input": {
+		"WHERE": {
+		  "AND": [
+			{
+			  "OR": [
+				{
+				  "GT": {
+					"sections_pass": 200
+				  }
+				},
+				{
+				  "IS": {
+					"sections_dept": "*ab*"
+				  }
+				},
+				{
+				  "NOT": {
+					"IS": {
+					  "sections_uuid": "100"
+					}
+				  }
+				}
+			  ]
+			},
+			{
+			  "LT": {
+				"sections_pass": 10
+			  }
+			},
+			{
+			  "IS": {
+				"sections_dept": "*c*"
+			  }
+			},
+			{
+			  "NOT": {
+				"NOT": {
+				  "IS": {
+					"sections_dept": "*d*"
+				  }
+				}
+			  }
+			}
+		  ]
+		},
+		"OPTIONS": {
+		  "COLUMNS": [
+			"sections_avg",
+			"sections_dept",
+			"sections_uuid"
+		  ],
+		  "ORDER": "sections_uuid"
+		}
+	  },
+	"errorExpected": false,
+	"expected": [{"sections_avg":88.8,"sections_dept":"edcp","sections_uuid":"15237"},{"sections_avg":88.8,"sections_dept":"edcp","sections_uuid":"15238"},{"sections_avg":79.4,"sections_dept":"edcp","sections_uuid":"16694"},{"sections_avg":88,"sections_dept":"edcp","sections_uuid":"16727"},{"sections_avg":88,"sections_dept":"edcp","sections_uuid":"16728"},{"sections_avg":90.25,"sections_dept":"edcp","sections_uuid":"17444"},{"sections_avg":90.25,"sections_dept":"edcp","sections_uuid":"17445"},{"sections_avg":86.89,"sections_dept":"eced","sections_uuid":"18406"},{"sections_avg":93,"sections_dept":"edcp","sections_uuid":"20334"},{"sections_avg":93,"sections_dept":"edcp","sections_uuid":"20335"},{"sections_avg":84.29,"sections_dept":"edcp","sections_uuid":"20336"},{"sections_avg":84.29,"sections_dept":"edcp","sections_uuid":"20337"},{"sections_avg":88.88,"sections_dept":"edcp","sections_uuid":"30563"},{"sections_avg":87.56,"sections_dept":"edcp","sections_uuid":"30577"},{"sections_avg":87.56,"sections_dept":"edcp","sections_uuid":"30578"},{"sections_avg":90.56,"sections_dept":"edcp","sections_uuid":"30579"},{"sections_avg":90.56,"sections_dept":"edcp","sections_uuid":"30580"},{"sections_avg":91.5,"sections_dept":"edcp","sections_uuid":"30581"},{"sections_avg":91.5,"sections_dept":"edcp","sections_uuid":"30582"},{"sections_avg":89.83,"sections_dept":"edcp","sections_uuid":"30583"},{"sections_avg":89.83,"sections_dept":"edcp","sections_uuid":"30584"},{"sections_avg":89.88,"sections_dept":"edcp","sections_uuid":"30590"},{"sections_avg":89.88,"sections_dept":"edcp","sections_uuid":"30591"},{"sections_avg":68.4,"sections_dept":"educ","sections_uuid":"31744"},{"sections_avg":63.5,"sections_dept":"educ","sections_uuid":"31745"},{"sections_avg":66.22,"sections_dept":"educ","sections_uuid":"31746"},{"sections_avg":58,"sections_dept":"educ","sections_uuid":"31749"},{"sections_avg":88.83,"sections_dept":"educ","sections_uuid":"31750"},{"sections_avg":65,"sections_dept":"educ","sections_uuid":"31751"},{"sections_avg":63.75,"sections_dept":"educ","sections_uuid":"31752"},{"sections_avg":83.89,"sections_dept":"eced","sections_uuid":"31887"},{"sections_avg":73.38,"sections_dept":"educ","sections_uuid":"40306"},{"sections_avg":89.33,"sections_dept":"educ","sections_uuid":"40307"},{"sections_avg":88.75,"sections_dept":"educ","sections_uuid":"40328"},{"sections_avg":88.75,"sections_dept":"educ","sections_uuid":"40329"},{"sections_avg":85.63,"sections_dept":"edcp","sections_uuid":"43609"},{"sections_avg":85.63,"sections_dept":"edcp","sections_uuid":"43610"},{"sections_avg":90,"sections_dept":"educ","sections_uuid":"46274"},{"sections_avg":88.86,"sections_dept":"educ","sections_uuid":"46285"},{"sections_avg":88.86,"sections_dept":"educ","sections_uuid":"46286"},{"sections_avg":81.7,"sections_dept":"educ","sections_uuid":"50479"},{"sections_avg":81.7,"sections_dept":"educ","sections_uuid":"50480"},{"sections_avg":89.14,"sections_dept":"educ","sections_uuid":"50498"},{"sections_avg":80.67,"sections_dept":"educ","sections_uuid":"58832"},{"sections_avg":89,"sections_dept":"educ","sections_uuid":"58856"},{"sections_avg":89,"sections_dept":"educ","sections_uuid":"58857"},{"sections_avg":90.2,"sections_dept":"edcp","sections_uuid":"62024"},{"sections_avg":90.2,"sections_dept":"edcp","sections_uuid":"62025"},{"sections_avg":91.88,"sections_dept":"edcp","sections_uuid":"62053"},{"sections_avg":91.88,"sections_dept":"edcp","sections_uuid":"62054"},{"sections_avg":89.25,"sections_dept":"educ","sections_uuid":"62255"},{"sections_avg":89.25,"sections_dept":"educ","sections_uuid":"62256"},{"sections_avg":93.6,"sections_dept":"educ","sections_uuid":"62272"},{"sections_avg":93.6,"sections_dept":"educ","sections_uuid":"62273"},{"sections_avg":89,"sections_dept":"edcp","sections_uuid":"64713"},{"sections_avg":89,"sections_dept":"edcp","sections_uuid":"64714"},{"sections_avg":94.17,"sections_dept":"edcp","sections_uuid":"64728"},{"sections_avg":94.17,"sections_dept":"edcp","sections_uuid":"64729"},{"sections_avg":78.43,"sections_dept":"educ","sections_uuid":"87236"},{"sections_avg":60.83,"sections_dept":"educ","sections_uuid":"87238"},{"sections_avg":88.5,"sections_dept":"educ","sections_uuid":"87242"},{"sections_avg":88.5,"sections_dept":"educ","sections_uuid":"87243"},{"sections_avg":83.57,"sections_dept":"educ","sections_uuid":"87245"},{"sections_avg":62,"sections_dept":"educ","sections_uuid":"87247"},{"sections_avg":84.14,"sections_dept":"educ","sections_uuid":"87260"},{"sections_avg":84.14,"sections_dept":"educ","sections_uuid":"87261"},{"sections_avg":89.67,"sections_dept":"edcp","sections_uuid":"87601"},{"sections_avg":88.5,"sections_dept":"edcp","sections_uuid":"87660"},{"sections_avg":88.5,"sections_dept":"edcp","sections_uuid":"87661"},{"sections_avg":62.75,"sections_dept":"educ","sections_uuid":"98524"},{"sections_avg":81.11,"sections_dept":"educ","sections_uuid":"98525"},{"sections_avg":77.78,"sections_dept":"educ","sections_uuid":"98529"},{"sections_avg":83.63,"sections_dept":"educ","sections_uuid":"98530"},{"sections_avg":73.38,"sections_dept":"educ","sections_uuid":"98531"},{"sections_avg":79.14,"sections_dept":"educ","sections_uuid":"98532"},{"sections_avg":89,"sections_dept":"educ","sections_uuid":"98551"},{"sections_avg":89,"sections_dept":"educ","sections_uuid":"98552"}]
+}

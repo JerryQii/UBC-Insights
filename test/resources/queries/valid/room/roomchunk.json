@@ -1,0 +1,167 @@
+{
+	"title": "roomchunk",
+	"input": {
+		"WHERE": {
+			"AND": [
+				{
+					"IS": {
+						"rooms_furniture": "*Tables*"
+					}
+				},
+				{
+					"GT": {
+						"rooms_seats": 150
+					}
+				}
+			]
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"rooms_shortname",
+				"maxSeats",
+				"minLon",
+				"avgLat",
+				"countSeats",
+				"sumLon"
+			],
+			"ORDER": {
+				"dir": "DOWN",
+				"keys": [
+					"maxSeats",
+					"avgLat"
+				]
+			}
+		},
+		"TRANSFORMATIONS": {
+			"GROUP": [
+				"rooms_shortname"
+			],
+			"APPLY": [
+				{
+					"maxSeats": {
+						"MAX": "rooms_seats"
+					}
+				},
+				{
+					"minLon": {
+						"MIN": "rooms_lon"
+					}
+				},
+				{
+					"avgLat": {
+						"AVG": "rooms_lat"
+					}
+				},
+				{
+					"countSeats": {
+						"COUNT": "rooms_seats"
+					}
+				},
+				{
+					"sumLon": {
+						"SUM": "rooms_lon"
+					}
+				}
+			]
+		}
+	},
+	"errorExpected": false,
+	"expected": [
+		{
+			"rooms_shortname": "OSBO",
+			"maxSeats": 442,
+			"minLon": -123.24467,
+			"avgLat": 49.26,
+			"countSeats": 1,
+			"sumLon": -123.24
+		},
+		{
+			"rooms_shortname": "HEBB",
+			"maxSeats": 375,
+			"minLon": -123.25165,
+			"avgLat": 49.27,
+			"countSeats": 1,
+			"sumLon": -123.25
+		},
+		{
+			"rooms_shortname": "LSC",
+			"maxSeats": 350,
+			"minLon": -123.24494,
+			"avgLat": 49.26,
+			"countSeats": 1,
+			"sumLon": -246.49
+		},
+		{
+			"rooms_shortname": "SRC",
+			"maxSeats": 299,
+			"minLon": -123.24894,
+			"avgLat": 49.27,
+			"countSeats": 1,
+			"sumLon": -369.75
+		},
+		{
+			"rooms_shortname": "ANGU",
+			"maxSeats": 260,
+			"minLon": -123.25364,
+			"avgLat": 49.26,
+			"countSeats": 1,
+			"sumLon": -123.25
+		},
+		{
+			"rooms_shortname": "PHRM",
+			"maxSeats": 236,
+			"minLon": -123.24342,
+			"avgLat": 49.26,
+			"countSeats": 2,
+			"sumLon": -246.49
+		},
+		{
+			"rooms_shortname": "LSK",
+			"maxSeats": 205,
+			"minLon": -123.25533,
+			"avgLat": 49.27,
+			"countSeats": 2,
+			"sumLon": -246.51
+		},
+		{
+			"rooms_shortname": "CHBE",
+			"maxSeats": 200,
+			"minLon": -123.24718,
+			"avgLat": 49.26,
+			"countSeats": 1,
+			"sumLon": -123.25
+		},
+		{
+			"rooms_shortname": "SWNG",
+			"maxSeats": 190,
+			"minLon": -123.25431,
+			"avgLat": 49.26,
+			"countSeats": 3,
+			"sumLon": -493.02
+		},
+		{
+			"rooms_shortname": "FRDM",
+			"maxSeats": 160,
+			"minLon": -123.24608,
+			"avgLat": 49.27,
+			"countSeats": 1,
+			"sumLon": -123.25
+		},
+		{
+			"rooms_shortname": "DMP",
+			"maxSeats": 160,
+			"minLon": -123.24807,
+			"avgLat": 49.26,
+			"countSeats": 1,
+			"sumLon": -123.25
+		},
+		{
+			"rooms_shortname": "IBLC",
+			"maxSeats": 154,
+			"minLon": -123.2521,
+			"avgLat": 49.27,
+			"countSeats": 1,
+			"sumLon": -123.25
+		}
+	]
+}

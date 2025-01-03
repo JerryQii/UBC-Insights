@@ -1,0 +1,293 @@
+/* style.css */
+
+/* Global Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Whiteney", sans-serif;
+}
+
+body {
+    background-color: #002145;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 900px;
+    width: 100%;
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 4rem;
+}
+
+/* Main Layout */
+main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+}
+
+section {
+    background-color: #0055B7;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+/* Dataset Sections */
+.dataset-list, .dataset-add {
+    /* Place them side by side */
+    /* No need to adjust grid-column as they naturally flow in the grid */
+}
+
+input[type="file"]::file-selector-button {
+    padding: 5px 10px;
+    background-color: #00A7E1;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+.dataset-list table {
+    width: 100%;
+    border-collapse: collapse; 
+    border-spacing: 0;
+    color: rgb(255, 255, 255);
+}
+
+
+.dataset-list th, .dataset-list td {
+    padding: 10px;
+    text-align: center;
+    /*border: 1px solid #ffffff;  #0055B7 */
+}
+    th:first-of-type {
+    border-top-left-radius: 10px;
+    
+  }
+  th:last-of-type {
+    border-top-right-radius: 10px;
+  }
+  tr:last-of-type td:first-of-type {
+    border-bottom-left-radius: 10px;
+  }
+  tr:last-of-type td:last-of-type {
+    border-bottom-right-radius: 10px;
+  }
+
+.dataset-list th {
+    background-color: #002145;
+}
+
+.dataset-list td {
+    background-color: #6EC4E8;
+}
+
+.dataset-list button {
+    padding: 5px 10px;
+    background-color: #00A7E1;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.dataset-add form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.dataset-add input[type="text"],
+.dataset-add select,
+.dataset-add input[type="file"] {
+    padding: 10px;
+    background-color: #002145;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    border-radius: 4px;
+}
+
+.dataset-add button {
+    padding: 10px;
+    background-color: #00A7E1;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Query and List Sections */
+.query-section, .list-of-courses {
+    /* Position them side by side in the grid */
+    /* They will naturally flow into the next row in the grid */
+}
+
+.query-section {
+    /* Adjusted styles */
+}
+
+.list-of-courses {
+    /* Adjusted styles */
+}
+
+/* Query Section */
+.query-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.query-form label {
+    font-weight: bold;
+}
+
+.query-form input[type="text"],
+.query-form select {
+    padding: 10px;
+    background-color: #002145;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    border-radius: 4px;
+    width: 100%;
+}
+
+.query-form button {
+    padding: 10px 20px;
+    background-color: #00A7E1;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.query-section canvas {
+    margin-top: 20px;
+    max-width: 100%;
+}
+
+/* List of Courses */
+.list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.list input {
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 10px;
+    background-color: #002145;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    border-radius: 4px;
+}
+
+.list button {
+    padding: 10px;
+    width: 100%;
+    background-color: #00A7E1;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.list ul {
+    list-style-type: circle;
+    padding: 0;
+    margin-top: 20px;
+    width: 100%;
+}
+
+
+.list ul li {
+    border: 1px solid #ccc; /* Optional border */
+    background-color: #002145; /*#0055B7*/
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.list ul li button {
+    width: 60px; /* Set a fixed width */
+    height: 30px; /* Set a fixed height */
+    background-color: #00A7E1;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Notification Styles */
+#notification-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 300px;
+    z-index: 1000;
+}
+
+.notification {
+    background-color: #0055B7;
+    color: #ffffff;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    opacity: 0.9;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.notification.success {
+    background-color: #28a745;
+}
+
+.notification.error {
+    background-color: #dc3545;
+}
+
+.notification.hide {
+    opacity: 0;
+}
+
+/* Chart.js Styles */
+canvas {
+    background-color: transparent;
+}
+
+.chartjs-render-monitor {
+    color: #ffffff;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+    
+    .dataset-list, .dataset-add, .query-section, .list-of-courses {
+        grid-column: 1 / -1;
+    }
+}

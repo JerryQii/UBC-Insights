@@ -1,0 +1,35 @@
+{
+	"title": "sections left should pass",
+	"input": {
+		"WHERE":{
+		   "OR":[	
+			  {
+				 "AND":[
+					{
+					   "GT":{
+						  "sections_avg":0
+					   }
+					},
+					{
+					   "IS":{
+						  "sections_dept":"*est"
+					   }
+					}
+				 ]
+			  },
+			  {
+				 "EQ":{
+					"sections_avg":0
+				 }
+			  }
+		   ]
+		},
+		"OPTIONS":{
+		   "COLUMNS":[
+			  "sections_id"
+		   ]
+		}
+	},
+	"errorExpected": false,
+	"expected":[{"sections_id":"202"},{"sections_id":"100"},{"sections_id":"100"},{"sections_id":"101"},{"sections_id":"101"},{"sections_id":"101"},{"sections_id":"101"},{"sections_id":"101"},{"sections_id":"101"},{"sections_id":"101"},{"sections_id":"101"},{"sections_id":"101"},{"sections_id":"101"},{"sections_id":"101"},{"sections_id":"101"},{"sections_id":"101"},{"sections_id":"101"},{"sections_id":"101"},{"sections_id":"101"},{"sections_id":"101"},{"sections_id":"101"},{"sections_id":"101"},{"sections_id":"101"},{"sections_id":"101"},{"sections_id":"101"},{"sections_id":"101"},{"sections_id":"101"},{"sections_id":"101"},{"sections_id":"101"},{"sections_id":"301"},{"sections_id":"301"},{"sections_id":"301"},{"sections_id":"301"},{"sections_id":"301"},{"sections_id":"301"},{"sections_id":"301"},{"sections_id":"301"},{"sections_id":"301"},{"sections_id":"301"},{"sections_id":"301"},{"sections_id":"301"},{"sections_id":"301"},{"sections_id":"301"},{"sections_id":"301"},{"sections_id":"301"},{"sections_id":"303"},{"sections_id":"303"},{"sections_id":"303"},{"sections_id":"303"},{"sections_id":"303"},{"sections_id":"303"},{"sections_id":"303"},{"sections_id":"303"},{"sections_id":"303"},{"sections_id":"303"},{"sections_id":"303"},{"sections_id":"303"},{"sections_id":"303"},{"sections_id":"303"},{"sections_id":"303"},{"sections_id":"303"},{"sections_id":"303"},{"sections_id":"303"},{"sections_id":"304"},{"sections_id":"304"},{"sections_id":"304"},{"sections_id":"304"},{"sections_id":"304"},{"sections_id":"304"},{"sections_id":"304"},{"sections_id":"304"},{"sections_id":"304"},{"sections_id":"304"},{"sections_id":"304"},{"sections_id":"304"},{"sections_id":"304"},{"sections_id":"304"},{"sections_id":"304"},{"sections_id":"304"},{"sections_id":"318"},{"sections_id":"318"},{"sections_id":"401"},{"sections_id":"401"},{"sections_id":"505"},{"sections_id":"505"},{"sections_id":"100"}]
+}

@@ -1,0 +1,149 @@
+{
+	"title": "Average Room Capacity West of Longitude -123.25",
+	"input": {
+		"WHERE": {
+			"LT": {
+				"rooms_lon": -123.25
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"rooms_shortname",
+				"avgSeats"
+			],
+			"ORDER": {
+				"dir": "DOWN",
+				"keys": [
+					"avgSeats"
+				]
+			}
+		},
+		"TRANSFORMATIONS": {
+			"GROUP": [
+				"rooms_shortname"
+			],
+			"APPLY": [
+				{
+					"avgSeats": {
+						"AVG": "rooms_seats"
+					}
+				}
+			]
+		}
+	},
+	"errorExpected": false,
+	"expected": [
+		{
+			"rooms_shortname": "CIRS",
+			"avgSeats": 426
+		},
+		{
+			"rooms_shortname": "ESB",
+			"avgSeats": 193.33
+		},
+		{
+			"rooms_shortname": "CHEM",
+			"avgSeats": 152.17
+		},
+		{
+			"rooms_shortname": "AERL",
+			"avgSeats": 144
+		},
+		{
+			"rooms_shortname": "HEBB",
+			"avgSeats": 134.25
+		},
+		{
+			"rooms_shortname": "LSK",
+			"avgSeats": 126.25
+		},
+		{
+			"rooms_shortname": "HENN",
+			"avgSeats": 109.67
+		},
+		{
+			"rooms_shortname": "MATX",
+			"avgSeats": 106
+		},
+		{
+			"rooms_shortname": "BIOL",
+			"avgSeats": 84
+		},
+		{
+			"rooms_shortname": "GEOG",
+			"avgSeats": 77.38
+		},
+		{
+			"rooms_shortname": "IONA",
+			"avgSeats": 75
+		},
+		{
+			"rooms_shortname": "SWNG",
+			"avgSeats": 64.59
+		},
+		{
+			"rooms_shortname": "MATH",
+			"avgSeats": 61.88
+		},
+		{
+			"rooms_shortname": "ANGU",
+			"avgSeats": 55.21
+		},
+		{
+			"rooms_shortname": "LASR",
+			"avgSeats": 54.17
+		},
+		{
+			"rooms_shortname": "BUCH",
+			"avgSeats": 52.3
+		},
+		{
+			"rooms_shortname": "EOSM",
+			"avgSeats": 50
+		},
+		{
+			"rooms_shortname": "FORW",
+			"avgSeats": 47.33
+		},
+		{
+			"rooms_shortname": "BRKX",
+			"avgSeats": 47
+		},
+		{
+			"rooms_shortname": "ANSO",
+			"avgSeats": 46.5
+		},
+		{
+			"rooms_shortname": "SCRF",
+			"avgSeats": 45.64
+		},
+		{
+			"rooms_shortname": "ALRD",
+			"avgSeats": 45.6
+		},
+		{
+			"rooms_shortname": "UCLL",
+			"avgSeats": 40.75
+		},
+		{
+			"rooms_shortname": "IBLC",
+			"avgSeats": 31.56
+		},
+		{
+			"rooms_shortname": "MCML",
+			"avgSeats": 30.16
+		},
+		{
+			"rooms_shortname": "PCOH",
+			"avgSeats": 30
+		},
+		{
+			"rooms_shortname": "SOWK",
+			"avgSeats": 28.71
+		},
+		{
+			"rooms_shortname": "AUDX",
+			"avgSeats": 20.5
+		}
+	]
+}

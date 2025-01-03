@@ -1,0 +1,570 @@
+{
+	"title": "Find Max Room Capacity per Building and Furniture Type",
+	"input": {
+		"WHERE": {},
+		"OPTIONS": {
+			"COLUMNS": [
+				"rooms_shortname",
+				"rooms_furniture",
+				"maxSeats"
+			],
+			"ORDER": {
+				"dir": "DOWN",
+				"keys": [
+					"maxSeats"
+				]
+			}
+		},
+		"TRANSFORMATIONS": {
+			"GROUP": [
+				"rooms_shortname",
+				"rooms_furniture"
+			],
+			"APPLY": [
+				{
+					"maxSeats": {
+						"MAX": "rooms_seats"
+					}
+				}
+			]
+		}
+	},
+	"errorExpected": false,
+	"expected": [
+		{
+			"rooms_shortname": "WOOD",
+			"rooms_furniture": "Classroom-Fixed Tablets",
+			"maxSeats": 503
+		},
+		{
+			"rooms_shortname": "OSBO",
+			"rooms_furniture": "Classroom-Movable Tables & Chairs",
+			"maxSeats": 442
+		},
+		{
+			"rooms_shortname": "CIRS",
+			"rooms_furniture": "Classroom-Fixed Tablets",
+			"maxSeats": 426
+		},
+		{
+			"rooms_shortname": "HEBB",
+			"rooms_furniture": "Classroom-Fixed Tables/Fixed Chairs",
+			"maxSeats": 375
+		},
+		{
+			"rooms_shortname": "ESB",
+			"rooms_furniture": "Classroom-Fixed Tablets",
+			"maxSeats": 350
+		},
+		{
+			"rooms_shortname": "LSC",
+			"rooms_furniture": "Classroom-Fixed Tables/Movable Chairs",
+			"maxSeats": 350
+		},
+		{
+			"rooms_shortname": "WESB",
+			"rooms_furniture": "Classroom-Fixed Tablets",
+			"maxSeats": 325
+		},
+		{
+			"rooms_shortname": "SRC",
+			"rooms_furniture": "Classroom-Movable Tables & Chairs",
+			"maxSeats": 299
+		},
+		{
+			"rooms_shortname": "SCRF",
+			"rooms_furniture": "Classroom-Fixed Tablets",
+			"maxSeats": 280
+		},
+		{
+			"rooms_shortname": "BUCH",
+			"rooms_furniture": "Classroom-Fixed Tablets",
+			"maxSeats": 275
+		},
+		{
+			"rooms_shortname": "CHEM",
+			"rooms_furniture": "Classroom-Fixed Tablets",
+			"maxSeats": 265
+		},
+		{
+			"rooms_shortname": "ANGU",
+			"rooms_furniture": "Classroom-Fixed Tables/Movable Chairs",
+			"maxSeats": 260
+		},
+		{
+			"rooms_shortname": "HENN",
+			"rooms_furniture": "Classroom-Fixed Tablets",
+			"maxSeats": 257
+		},
+		{
+			"rooms_shortname": "FSC",
+			"rooms_furniture": "Classroom-Fixed Tablets",
+			"maxSeats": 250
+		},
+		{
+			"rooms_shortname": "PHRM",
+			"rooms_furniture": "Classroom-Fixed Tables/Movable Chairs",
+			"maxSeats": 236
+		},
+		{
+			"rooms_shortname": "BIOL",
+			"rooms_furniture": "Classroom-Fixed Tablets",
+			"maxSeats": 228
+		},
+		{
+			"rooms_shortname": "GEOG",
+			"rooms_furniture": "Classroom-Fixed Tablets",
+			"maxSeats": 225
+		},
+		{
+			"rooms_shortname": "MATH",
+			"rooms_furniture": "Classroom-Fixed Tablets",
+			"maxSeats": 224
+		},
+		{
+			"rooms_shortname": "LSK",
+			"rooms_furniture": "Classroom-Fixed Tables/Fixed Chairs",
+			"maxSeats": 205
+		},
+		{
+			"rooms_shortname": "CHBE",
+			"rooms_furniture": "Classroom-Fixed Tables/Movable Chairs",
+			"maxSeats": 200
+		},
+		{
+			"rooms_shortname": "MCML",
+			"rooms_furniture": "Classroom-Fixed Tablets",
+			"maxSeats": 200
+		},
+		{
+			"rooms_shortname": "SWNG",
+			"rooms_furniture": "Classroom-Fixed Tables/Movable Chairs",
+			"maxSeats": 190
+		},
+		{
+			"rooms_shortname": "FRDM",
+			"rooms_furniture": "Classroom-Fixed Tables/Movable Chairs",
+			"maxSeats": 160
+		},
+		{
+			"rooms_shortname": "DMP",
+			"rooms_furniture": "Classroom-Fixed Tables/Movable Chairs",
+			"maxSeats": 160
+		},
+		{
+			"rooms_shortname": "IBLC",
+			"rooms_furniture": "Classroom-Fixed Tables/Fixed Chairs",
+			"maxSeats": 154
+		},
+		{
+			"rooms_shortname": "ESB",
+			"rooms_furniture": "Classroom-Hybrid Furniture",
+			"maxSeats": 150
+		},
+		{
+			"rooms_shortname": "AERL",
+			"rooms_furniture": "Classroom-Fixed Tablets",
+			"maxSeats": 144
+		},
+		{
+			"rooms_shortname": "MCLD",
+			"rooms_furniture": "Classroom-Fixed Tables/Fixed Chairs",
+			"maxSeats": 136
+		},
+		{
+			"rooms_shortname": "WOOD",
+			"rooms_furniture": "Classroom-Fixed Tables/Movable Chairs",
+			"maxSeats": 120
+		},
+		{
+			"rooms_shortname": "IBLC",
+			"rooms_furniture": "Classroom-Movable Tables & Chairs",
+			"maxSeats": 112
+		},
+		{
+			"rooms_shortname": "BUCH",
+			"rooms_furniture": "Classroom-Fixed Tables/Fixed Chairs",
+			"maxSeats": 108
+		},
+		{
+			"rooms_shortname": "MATX",
+			"rooms_furniture": "Classroom-Fixed Tablets",
+			"maxSeats": 106
+		},
+		{
+			"rooms_shortname": "CEME",
+			"rooms_furniture": "Classroom-Fixed Tables/Fixed Chairs",
+			"maxSeats": 100
+		},
+		{
+			"rooms_shortname": "GEOG",
+			"rooms_furniture": "Classroom-Movable Tables & Chairs",
+			"maxSeats": 100
+		},
+		{
+			"rooms_shortname": "IONA",
+			"rooms_furniture": "Classroom-Fixed Tables/Movable Chairs",
+			"maxSeats": 100
+		},
+		{
+			"rooms_shortname": "FNH",
+			"rooms_furniture": "Classroom-Fixed Tablets",
+			"maxSeats": 99
+		},
+		{
+			"rooms_shortname": "ALRD",
+			"rooms_furniture": "Classroom-Fixed Tables/Movable Chairs",
+			"maxSeats": 94
+		},
+		{
+			"rooms_shortname": "LASR",
+			"rooms_furniture": "Classroom-Fixed Tablets",
+			"maxSeats": 94
+		},
+		{
+			"rooms_shortname": "ANSO",
+			"rooms_furniture": "Classroom-Moveable Tablets",
+			"maxSeats": 90
+		},
+		{
+			"rooms_shortname": "MCLD",
+			"rooms_furniture": "Classroom-Movable Tables & Chairs",
+			"maxSeats": 84
+		},
+		{
+			"rooms_shortname": "ESB",
+			"rooms_furniture": "Classroom-Fixed Tables/Movable Chairs",
+			"maxSeats": 80
+		},
+		{
+			"rooms_shortname": "LASR",
+			"rooms_furniture": "Classroom-Fixed Tables/Fixed Chairs",
+			"maxSeats": 80
+		},
+		{
+			"rooms_shortname": "ANGU",
+			"rooms_furniture": "Classroom-Movable Tables & Chairs",
+			"maxSeats": 80
+		},
+		{
+			"rooms_shortname": "BUCH",
+			"rooms_furniture": "Classroom-Fixed Tables/Moveable Chairs",
+			"maxSeats": 78
+		},
+		{
+			"rooms_shortname": "BUCH",
+			"rooms_furniture": "Classroom-Fixed Tables/Movable Chairs",
+			"maxSeats": 78
+		},
+		{
+			"rooms_shortname": "BIOL",
+			"rooms_furniture": "Classroom-Fixed Tables/Movable Chairs",
+			"maxSeats": 76
+		},
+		{
+			"rooms_shortname": "LSK",
+			"rooms_furniture": "Classroom-Movable Tables & Chairs",
+			"maxSeats": 75
+		},
+		{
+			"rooms_shortname": "GEOG",
+			"rooms_furniture": "Classroom-Fixed Tables/Movable Chairs",
+			"maxSeats": 72
+		},
+		{
+			"rooms_shortname": "MCML",
+			"rooms_furniture": "Classroom-Fixed Tables/Movable Chairs",
+			"maxSeats": 72
+		},
+		{
+			"rooms_shortname": "ORCH",
+			"rooms_furniture": "Classroom-Hybrid Furniture",
+			"maxSeats": 72
+		},
+		{
+			"rooms_shortname": "ORCH",
+			"rooms_furniture": "Classroom-Movable Tables & Chairs",
+			"maxSeats": 72
+		},
+		{
+			"rooms_shortname": "ORCH",
+			"rooms_furniture": "Classroom-Learn Lab",
+			"maxSeats": 72
+		},
+		{
+			"rooms_shortname": "PHRM",
+			"rooms_furniture": "Classroom-Movable Tables & Chairs",
+			"maxSeats": 72
+		},
+		{
+			"rooms_shortname": "BRKX",
+			"rooms_furniture": "Classroom-Fixed Tables/Movable Chairs",
+			"maxSeats": 70
+		},
+		{
+			"rooms_shortname": "SOWK",
+			"rooms_furniture": "Classroom-Movable Tablets",
+			"maxSeats": 68
+		},
+		{
+			"rooms_shortname": "SPPH",
+			"rooms_furniture": "Classroom-Fixed Tables/Movable Chairs",
+			"maxSeats": 66
+		},
+		{
+			"rooms_shortname": "FSC",
+			"rooms_furniture": "Classroom-Fixed Tables/Movable Chairs",
+			"maxSeats": 65
+		},
+		{
+			"rooms_shortname": "FORW",
+			"rooms_furniture": "Classroom-Fixed Tables/Movable Chairs",
+			"maxSeats": 63
+		},
+		{
+			"rooms_shortname": "CEME",
+			"rooms_furniture": "Classroom-Fixed Tables/Movable Chairs",
+			"maxSeats": 62
+		},
+		{
+			"rooms_shortname": "CHBE",
+			"rooms_furniture": "Classroom-Movable Tables & Chairs",
+			"maxSeats": 60
+		},
+		{
+			"rooms_shortname": "MATH",
+			"rooms_furniture": "Classroom-Movable Tables & Chairs",
+			"maxSeats": 60
+		},
+		{
+			"rooms_shortname": "SCRF",
+			"rooms_furniture": "Classroom-Movable Tables & Chairs",
+			"maxSeats": 60
+		},
+		{
+			"rooms_shortname": "UCLL",
+			"rooms_furniture": "Classroom-Fixed Tables/Movable Chairs",
+			"maxSeats": 55
+		},
+		{
+			"rooms_shortname": "FNH",
+			"rooms_furniture": "Classroom-Movable Tablets",
+			"maxSeats": 54
+		},
+		{
+			"rooms_shortname": "HEBB",
+			"rooms_furniture": "Classroom-Movable Tables & Chairs",
+			"maxSeats": 54
+		},
+		{
+			"rooms_shortname": "LASR",
+			"rooms_furniture": "Classroom-Movable Tablets",
+			"maxSeats": 51
+		},
+		{
+			"rooms_shortname": "BUCH",
+			"rooms_furniture": "Classroom-Movable Tablets",
+			"maxSeats": 50
+		},
+		{
+			"rooms_shortname": "EOSM",
+			"rooms_furniture": "Classroom-Movable Tables & Chairs",
+			"maxSeats": 50
+		},
+		{
+			"rooms_shortname": "IONA",
+			"rooms_furniture": "Classroom-Movable Tables & Chairs",
+			"maxSeats": 50
+		},
+		{
+			"rooms_shortname": "IBLC",
+			"rooms_furniture": "Classroom-Fixed Tables/Movable Chairs",
+			"maxSeats": 50
+		},
+		{
+			"rooms_shortname": "UCLL",
+			"rooms_furniture": "Classroom-Movable Tables & Chairs",
+			"maxSeats": 48
+		},
+		{
+			"rooms_shortname": "MCML",
+			"rooms_furniture": "Classroom-Movable Tables & Chairs",
+			"maxSeats": 47
+		},
+		{
+			"rooms_shortname": "SWNG",
+			"rooms_furniture": "Classroom-Movable Tables & Chairs",
+			"maxSeats": 47
+		},
+		{
+			"rooms_shortname": "FORW",
+			"rooms_furniture": "Classroom-Movable Tables & Chairs",
+			"maxSeats": 44
+		},
+		{
+			"rooms_shortname": "BUCH",
+			"rooms_furniture": "Classroom-Movable Tables & Chairs",
+			"maxSeats": 42
+		},
+		{
+			"rooms_shortname": "DMP",
+			"rooms_furniture": "Classroom-Movable Tables & Chairs",
+			"maxSeats": 40
+		},
+		{
+			"rooms_shortname": "SCRF",
+			"rooms_furniture": "Classroom-Moveable Tables & Chairs",
+			"maxSeats": 40
+		},
+		{
+			"rooms_shortname": "PCOH",
+			"rooms_furniture": "Classroom-Movable Tables & Chairs",
+			"maxSeats": 40
+		},
+		{
+			"rooms_shortname": "PCOH",
+			"rooms_furniture": "Classroom-Fixed Tables/Movable Chairs",
+			"maxSeats": 40
+		},
+		{
+			"rooms_shortname": "MGYM",
+			"rooms_furniture": "Classroom-Movable Tablets",
+			"maxSeats": 40
+		},
+		{
+			"rooms_shortname": "GEOG",
+			"rooms_furniture": "Classroom-Moveable Tables & Chairs",
+			"maxSeats": 39
+		},
+		{
+			"rooms_shortname": "OSBO",
+			"rooms_furniture": "Classroom-Movable Tablets",
+			"maxSeats": 39
+		},
+		{
+			"rooms_shortname": "ANSO",
+			"rooms_furniture": "Classroom-Moveable Tables & Chairs",
+			"maxSeats": 37
+		},
+		{
+			"rooms_shortname": "FSC",
+			"rooms_furniture": "Classroom-Movable Tables & Chairs",
+			"maxSeats": 36
+		},
+		{
+			"rooms_shortname": "HENN",
+			"rooms_furniture": "Classroom-Movable Tables & Chairs",
+			"maxSeats": 36
+		},
+		{
+			"rooms_shortname": "IBLC",
+			"rooms_furniture": "Classroom-Movable Tablets",
+			"maxSeats": 30
+		},
+		{
+			"rooms_shortname": "MATH",
+			"rooms_furniture": "Classroom-Movable Tablets",
+			"maxSeats": 30
+		},
+		{
+			"rooms_shortname": "UCLL",
+			"rooms_furniture": "Classroom-Learn Lab",
+			"maxSeats": 30
+		},
+		{
+			"rooms_shortname": "WOOD",
+			"rooms_furniture": "Classroom-Movable Tables & Chairs",
+			"maxSeats": 30
+		},
+		{
+			"rooms_shortname": "FNH",
+			"rooms_furniture": "Classroom-Movable Tables & Chairs",
+			"maxSeats": 28
+		},
+		{
+			"rooms_shortname": "SWNG",
+			"rooms_furniture": "Classroom-Moveable Tables & Chairs",
+			"maxSeats": 27
+		},
+		{
+			"rooms_shortname": "ANSO",
+			"rooms_furniture": "Classroom-Movable Tables & Chairs",
+			"maxSeats": 26
+		},
+		{
+			"rooms_shortname": "CEME",
+			"rooms_furniture": "Classroom-Movable Tables & Chairs",
+			"maxSeats": 26
+		},
+		{
+			"rooms_shortname": "ORCH",
+			"rooms_furniture": "Classroom-Fixed Tables/Movable Chairs",
+			"maxSeats": 25
+		},
+		{
+			"rooms_shortname": "BRKX",
+			"rooms_furniture": "Classroom-Movable Tables & Chairs",
+			"maxSeats": 24
+		},
+		{
+			"rooms_shortname": "BUCH",
+			"rooms_furniture": "Classroom-Moveable Tables & Chairs",
+			"maxSeats": 24
+		},
+		{
+			"rooms_shortname": "PCOH",
+			"rooms_furniture": "Classroom-Movable Tablets",
+			"maxSeats": 24
+		},
+		{
+			"rooms_shortname": "AUDX",
+			"rooms_furniture": "Classroom-Movable Tables & Chairs",
+			"maxSeats": 21
+		},
+		{
+			"rooms_shortname": "WOOD",
+			"rooms_furniture": "Classroom-Movable Tablets",
+			"maxSeats": 21
+		},
+		{
+			"rooms_shortname": "ALRD",
+			"rooms_furniture": "Classroom-Movable Tables & Chairs",
+			"maxSeats": 20
+		},
+		{
+			"rooms_shortname": "LASR",
+			"rooms_furniture": "Classroom-Movable Tables & Chairs",
+			"maxSeats": 20
+		},
+		{
+			"rooms_shortname": "BIOL",
+			"rooms_furniture": "Classroom-Movable Tables & Chairs",
+			"maxSeats": 16
+		},
+		{
+			"rooms_shortname": "SOWK",
+			"rooms_furniture": "Classroom-Movable Tables & Chairs",
+			"maxSeats": 16
+		},
+		{
+			"rooms_shortname": "ORCH",
+			"rooms_furniture": "Classroom-Movable Tablets",
+			"maxSeats": 16
+		},
+		{
+			"rooms_shortname": "SPPH",
+			"rooms_furniture": "Classroom-Movable Tables & Chairs",
+			"maxSeats": 16
+		},
+		{
+			"rooms_shortname": "IBLC",
+			"rooms_furniture": "Classroom-Moveable Tables & Chairs",
+			"maxSeats": 8
+		},
+		{
+			"rooms_shortname": "MCML",
+			"rooms_furniture": "Classroom-Moveable Tables & Chairs",
+			"maxSeats": 8
+		}
+	]
+}

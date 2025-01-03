@@ -1,0 +1,38 @@
+{
+	"title": "case sensitive",
+	"input": {
+		"where":{
+		   "or":[	
+			  {
+				 "and":[
+					{
+					   "gt":{
+						  "sections_avg":90
+					   }
+					},
+					{
+					   "is":{
+						  "sections_dept":"adhe"
+					   }
+					}
+				 ]
+			  },
+			  {
+				 "eq":{
+					"sections_avg":95
+				 }
+			  }
+		   ]
+		},
+		"options":{
+		   "columns":[
+			  "sections_dept",
+			  "sections_id",
+			  "sections_avg"
+		   ],
+		   "order":"sections_avg"
+		}
+	},
+	"errorExpected": true,
+	"expected": "InsightError"
+}

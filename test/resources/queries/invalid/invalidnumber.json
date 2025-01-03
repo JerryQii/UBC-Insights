@@ -1,0 +1,59 @@
+{
+	"title": "",
+	"input": {
+		"WHERE": {
+		  "AND": [
+			{
+			  "OR": [
+				{
+				  "GT": {
+					"sections_pass": 20q0
+				  }
+				},
+				{
+				  "IS": {
+					"sections_dept": "*ab*"
+				  }
+				},
+				{
+				  "NOT": {
+					"IS": {
+					  "sections_uuid": "100"
+					}
+				  }
+				}
+			  ]
+			},
+			{
+			  "LT": {
+				"sections_pass": 10
+			  }
+			},
+			{
+			  "IS": {
+				"sections_dept": "*c*"
+			  }
+			},
+			{
+			  "NOT": {
+				"NOT": {
+				  "IS": {
+					"sections_dept": "*d*"
+				  }
+				}
+			  }
+			}
+		  ]
+		},
+		"OPTIONS": {
+		  "COLUMNS": [
+			"sections_avg",
+			"sections_dept",
+			"sections_uuid"
+		  ],
+		  "ORDER": "sections_uuid"
+		}
+	  },
+	"errorExpected": true,
+	"expected": "InsightError"
+}
